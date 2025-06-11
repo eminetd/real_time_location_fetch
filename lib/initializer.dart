@@ -31,8 +31,8 @@ class InitialController extends GetxController {
     _location.changeSettings(accuracy: LocationAccuracy.high);
 
 
-    // get location periodically whatever you set a min
-    _timer = Timer.periodic(Duration(minutes: 1), (timer) async {
+    //  location periodically whatever you set a min
+    _timer = Timer.periodic(Duration(minutes: 15), (timer) async {
       try {
         LocationData locationData = await _location.getLocation();
         double lat = locationData.latitude!;
@@ -63,7 +63,7 @@ class InitialController extends GetxController {
     );
 
     final body = {
-      'engineer_id': 'sudeep.kulkarni@mannlowe.com',
+      'engineer_id': 'nikhil.fengse@mannlowe.com',
       'location': 'LatLng(lat: $lat, lng: $lng)',
     };
 
